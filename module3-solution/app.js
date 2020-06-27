@@ -57,6 +57,9 @@
 
     menu.removeItem = function (itemIndex) {
       menu.found.splice(itemIndex, 1);
+      if (menu.found.length == 0) {
+        menu.error = true;
+      }
     };
   }
 
